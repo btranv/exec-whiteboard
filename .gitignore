@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+*.pyc
+*.log
+
+# Generated artifacts
+board_raw.json
+board_full.txt
+
+# Secrets — never commit these
+.figma_token
+.anthropic_key
+.gcp_credentials.json
+.gmail_token.json
+.sector_config.json
+.polling_consecutive_failures
+.action_log_doc_id
+.processed_label_id
+
+# Note: .action_log_doc_id and .processed_label_id are NOT secret;
+# they're identifiers and we want them tracked so cloud and local stay in sync.

@@ -16,6 +16,7 @@ board_full.txt
 .polling_consecutive_failures
 .action_log_doc_id
 .processed_label_id
+.airtable_token
 
 # Note: .action_log_doc_id and .processed_label_id are NOT secret;
 # they're identifiers and we want them tracked so cloud and local stay in sync.

@@ -24,3 +24,5 @@ business_context   = _data["business_context"]
 inference_rules    = _data["inference_rules"]
 action_log_doc_id  = _data.get("action_log_doc_id")  # None on first run; gets created
 processed_label_id = _data.get("processed_label_id")  # None on first run; gets created
+airtable_base_id   = _data.get("airtable_base_id")
+airtable_tables    = _data.get("airtable_tables", {})  # {table_name: table_id}

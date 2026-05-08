@@ -22,12 +22,14 @@ jobs:
           GMAIL_TOKEN_JSON: ${{ secrets.GMAIL_TOKEN_JSON }}
           GCP_CREDENTIALS_JSON: ${{ secrets.GCP_CREDENTIALS_JSON }}
           SECTOR_CONFIG_JSON: ${{ secrets.SECTOR_CONFIG_JSON }}
+          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
         run: |
           printf '%s' "$ANTHROPIC_API_KEY" > .anthropic_key
           printf '%s' "$FIGMA_TOKEN" > .figma_token
           printf '%s' "$GMAIL_TOKEN_JSON" > .gmail_token.json
           printf '%s' "$GCP_CREDENTIALS_JSON" > .gcp_credentials.json
           printf '%s' "$SECTOR_CONFIG_JSON" > .sector_config.json
-          chmod 600 .anthropic_key .figma_token .gmail_token.json .gcp_credentials.json .sector_config.json
+          printf '%s' "$AIRTABLE_TOKEN" > .airtable_token
+          chmod 600 .anthropic_key .figma_token .gmail_token.json .gcp_credentials.json .sector_config.json .airtable_token
       - name: Check for replies
         run: python check_replies.py
